@@ -19,6 +19,9 @@ namespace Project1
             HorizontalLine line = new HorizontalLine(5,10,8,'+');
             line.Drow();
 
+            VerticalLine line1 = new VerticalLine(5, 10, 25, '+');
+            line1.Drow();
+
 
             Console.ReadLine();
         }
