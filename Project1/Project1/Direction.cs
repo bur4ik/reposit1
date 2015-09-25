@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Project1
 {
-    class Direction
+    enum Direction
     {
+        LEFT,
+        RIGHT,
+        UP,
+        DOWN
     }
 }
