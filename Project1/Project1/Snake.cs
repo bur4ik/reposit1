@@ -10,8 +10,9 @@ namespace Project1
     {
         Direction direction;
 
-        public Snake(Point tail, int lenght, Direction direction)
+        public Snake( Point tail, int lenght, Direction _direction )
         {
+            direction = _direction;
             pList = new List<Point>();
             for(int i = 0; i < lenght; i++) 
             {
