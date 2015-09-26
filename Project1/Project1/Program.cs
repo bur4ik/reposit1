@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Project1
 {
     class Program
-    {
+     {
         static void Main(string[] args)
         {
             Console.SetBufferSize(80, 25);
