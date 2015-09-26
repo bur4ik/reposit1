@@ -22,8 +22,8 @@ namespace Project1
             Draw(fsnake);
             Snake snake = (Snake)fsnake;
 
-            VerticalLine v1 = new VerticalLine(0, 10, 5, '%');
-            HorizontalLine h1 = new HorizontalLine(0, 5, 6, '%');
+            VerticalLine v1 = new VerticalLine(1, 10, 21, '%');
+            HorizontalLine h1 = new HorizontalLine(7, 10, 6, '%');
 
             List<Figure> figures = new List<Figure>();
             figures.Add(fsnake);
