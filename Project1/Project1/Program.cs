@@ -13,28 +13,40 @@ namespace Project1
         {
             Console.SetBufferSize(80, 25);
 
-            // Field
-
-            HorizontalLine upline = new HorizontalLine(0,78,0,'+');
-            upline.Draw();
-            HorizontalLine downline = new HorizontalLine(0, 78, 24, '+');
-            downline.Draw();
-            VerticalLine leftline = new VerticalLine(0, 24, 0, '+');
-            leftline.Draw();
-            VerticalLine rightline = new VerticalLine(0, 24, 78, '+');
-            rightline.Draw();
+            Walls walls = new Walls(80, 25);
+            walls.Draw();
 
             // Point
             Point p = new Point(4, 5, '*');
-            Snake snake = new Snake(p, 4, Direction.RIGHT);
-            snake.Draw();
+            Figure fsnake = new Snake(p, 4, Direction.RIGHT);
+            Draw(fsnake);
+            Snake snake = (Snake)fsnake;
+
+            VerticalLine v1 = new VerticalLine(0, 10, 5, '%');
+            Draw(v1);
+
+            HorizontalLine h1 = new HorizontalLine(0, 5, 6, '%');
+
+            List<Figure> figures = new List<Figure>();
+            figures.Add(fsnake);
+            figures.Add(v1);
+            figures.Add(h1);
+
+            foreach(var f in figures)
+            {
+                f.Draw();
+            }
 
             FoodCreator foodCreator = new FoodCreator(80, 25, '$');
             Point food = foodCreator.CreateFood();
             food.Draw();
 
-            while(true)
+            while (true)
             {
+                if (walls.IsHit(snake) || snake.IsHitTail())
+                {
+                    break;
+                }
                 if (snake.Eat(food))
                 {
                     food = foodCreator.CreateFood();
@@ -53,6 +65,10 @@ namespace Project1
                     snake.Handlekey(key.Key);
                 }
             }
+        }
+        static void Draw(Figure figure)
+        {
+            figure.Draw();
         }
     }
 }
