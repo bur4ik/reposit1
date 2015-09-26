@@ -23,8 +23,6 @@ namespace Project1
             Snake snake = (Snake)fsnake;
 
             VerticalLine v1 = new VerticalLine(0, 10, 5, '%');
-            Draw(v1);
-
             HorizontalLine h1 = new HorizontalLine(0, 5, 6, '%');
 
             List<Figure> figures = new List<Figure>();
