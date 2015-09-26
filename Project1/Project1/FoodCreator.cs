@@ -8,7 +8,6 @@ namespace Project1
 {
     class FoodCreator
     {
-
         int mapWidth;
         int mapHeight;
         char sym;
