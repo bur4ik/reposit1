@@ -1,6 +1,0 @@
-D:\SmartGit\Reposit1\Project1\Project1\bin\Debug\Project1.exe.config
-D:\SmartGit\Reposit1\Project1\Project1\bin\Debug\Project1.exe
-D:\SmartGit\Reposit1\Project1\Project1\bin\Debug\Project1.pdb
-D:\SmartGit\Reposit1\Project1\Project1\obj\Debug\Project1.csprojResolveAssemblyReference.cache
-D:\SmartGit\Reposit1\Project1\Project1\obj\Debug\Project1.exe
-D:\SmartGit\Reposit1\Project1\Project1\obj\Debug\Project1.pdb
