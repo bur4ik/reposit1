@@ -16,18 +16,18 @@ namespace Project1
             // Field
 
             HorizontalLine upline = new HorizontalLine(0,78,0,'+');
-            upline.Drow();
+            upline.Draw();
             HorizontalLine downline = new HorizontalLine(0, 78, 24, '+');
-            downline.Drow();
+            downline.Draw();
             VerticalLine leftline = new VerticalLine(0, 24, 0, '+');
-            leftline.Drow();
+            leftline.Draw();
             VerticalLine rightline = new VerticalLine(0, 24, 78, '+');
-            rightline.Drow();
+            rightline.Draw();
 
             // Point
             Point p = new Point(4, 5, '*');
             Snake snake = new Snake(p, 4, Direction.RIGHT);
-            snake.Drow();
+            snake.Draw();
 
             FoodCreator foodCreator = new FoodCreator(80, 25, '$');
             Point food = foodCreator.CreateFood();
@@ -50,7 +50,7 @@ namespace Project1
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.Handlekey(key.Key);
                 }
-                Thread.Sleep(100);
+                Thread.Sleep(400);
                 snake.Move();
             }
         }

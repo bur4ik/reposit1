@@ -50,5 +50,18 @@ namespace Project1
             else if (key == ConsoleKey.DownArrow)
                 direction = Direction.DOWN;
         }
+
+        internal bool Eat(Point food)
+        {
+            Point head = GetNextPoint();
+            if (head.IsHit(food))
+            {
+                food.sym = head.sym;
+                pList.Add(food);
+                return true;
+            }
+            else
+                return false;
+        }
     }
 }
