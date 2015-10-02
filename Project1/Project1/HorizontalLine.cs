@@ -26,5 +26,5 @@ namespace Project1
 
             Console.ForegroundColor = ConsoleColor.White;
         }
-      }
-    }
+     }
+  }
